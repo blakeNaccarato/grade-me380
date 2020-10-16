@@ -42,10 +42,11 @@ def update_active_grade(
         warn("Supplied gradebook different than expected one.")
 
     active_document = docxrev.get_active_document()
-    if active_document.com.FullName in paths:
-        update_grade(active_document, gradebook_path)
-    else:
-        raise Exception("Active document not in paths.")
+    with active_document:
+        if active_document.path in paths:  # we consume the `paths` generator here
+            update_grade(active_document, gradebook_path)
+        else:
+            raise Exception("Active document not in paths.")
 
 
 if __name__ == "__main__":
