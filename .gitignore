@@ -7,10 +7,6 @@ submissions/*
 # * -------------------------------------------------------------------------------- * #
 # * SPHINX
 
-# sphinx build folder
-docs/_build/*
-docs/_static/*
-
 # Compiled source #
 ###################
 *.com

@@ -1,0 +1,382 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Grade &mdash; Python  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home" alt="Documentation Home"> Python
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Grade</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Grade</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-add_template_comments">
+<span id="grade"></span><h1>Grade<a class="headerlink" href="#module-add_template_comments" title="Permalink to this headline">¶</a></h1>
+<p>Add template comments to all documents in the directory.</p>
+<dl class="py function">
+<dt id="add_template_comments.add_template_comments">
+<code class="sig-prename descclassname">add_template_comments.</code><code class="sig-name descname">add_template_comments</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directory</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>str<span class="p">, </span>os.PathLike<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#add_template_comments.add_template_comments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add template comments to all documents in the directory.</p>
+<p>Add template comments to all documents in <cite>directory</cite>. If <cite>directory</cite> is not
+supplied, then use the hardcoded paths defined in <cite>shared.PY</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>directory</strong> – The directory containing the documents to add template comments to.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<span class="target" id="module-delete_all_comments"></span><p>Delete all comments from all documents in the directory.</p>
+<dl class="py function">
+<dt id="delete_all_comments.delete_all_comments">
+<code class="sig-prename descclassname">delete_all_comments.</code><code class="sig-name descname">delete_all_comments</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directory</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>str<span class="p">, </span>os.PathLike<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#delete_all_comments.delete_all_comments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete all comments from all documents in the directory.</p>
+<p>Delete all comments from all documents in <cite>directory</cite>. If <cite>directory</cite> is not
+supplied, then use the hardcoded paths defined in <cite>shared.py</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>directory</strong> – The directory containing the documents with comments to be deleted.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<span class="target" id="module-open_all"></span><p>Open all documents in preparation for grading.</p>
+<dl class="py function">
+<dt id="open_all.open_all">
+<code class="sig-prename descclassname">open_all.</code><code class="sig-name descname">open_all</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directory</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>str<span class="p">, </span>os.PathLike<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#open_all.open_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open all documents in preparation for grading.</p>
+<p>Open documents in <cite>directory</cite> in preparation for grading. If <cite>directory</cite> is not
+supplied, then use the hardcoded <cite>shared.directory</cite> defined in <cite>shared.py</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>directory</strong> – The directory containing the documents to open.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<span class="target" id="module-shared"></span><p>Shared values.</p>
+<dl class="py function">
+<dt id="shared.get_paths">
+<code class="sig-prename descclassname">shared.</code><code class="sig-name descname">get_paths</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directory</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>str<span class="p">, </span>os.PathLike<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Iterator<span class="p">[</span>os.PathLike<span class="p">]</span><a class="headerlink" href="#shared.get_paths" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the paths to all documents in a directory.</p>
+<p>Get the paths to all documents in a directory or else just return the paths
+specified in <cite>shared.py</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>directory</strong> – The directory to get documents from.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<span class="target" id="module-update_all_grades"></span><p>Update all grades.</p>
+<dl class="py function">
+<dt id="update_all_grades.update_all_grades">
+<code class="sig-prename descclassname">update_all_grades.</code><code class="sig-name descname">update_all_grades</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directory</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>str<span class="p">, </span>os.PathLike<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gradebook_path</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>str<span class="p">, </span>os.PathLike<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#update_all_grades.update_all_grades" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update all grades.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>directory</strong> – The directory to update grades in.</p></li>
+<li><p><strong>gradebook_path</strong> – The gradebook to update.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<span class="target" id="module-update_grade"></span><p>Update the gradebook and document comments to reflect the latest grade.</p>
+<dl class="py function">
+<dt id="update_grade.update_grade">
+<code class="sig-prename descclassname">update_grade.</code><code class="sig-name descname">update_grade</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">document</span><span class="p">:</span> <span class="n">docxrev.com.Document</span></em>, <em class="sig-param"><span class="n">gradebook_path</span><span class="p">:</span> <span class="n">os.PathLike</span></em><span class="sig-paren">)</span><a class="headerlink" href="#update_grade.update_grade" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update a document’s grade as well as the gradebook.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>document</strong> – The document.</p></li>
+<li><p><strong>gradebook_path</strong> – The gradebook.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="update_grade.grade_document">
+<code class="sig-prename descclassname">update_grade.</code><code class="sig-name descname">grade_document</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">document</span><span class="p">:</span> <span class="n">docxrev.com.Document</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#update_grade.Grade" title="update_grade.Grade">update_grade.Grade</a><a class="headerlink" href="#update_grade.grade_document" title="Permalink to this definition">¶</a></dt>
+<dd><p>Grade a document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>document</strong> – The doucment.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="update_grade.update_document_scores">
+<code class="sig-prename descclassname">update_grade.</code><code class="sig-name descname">update_document_scores</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">document</span><span class="p">:</span> <span class="n">docxrev.com.Document</span></em>, <em class="sig-param"><span class="n">grade</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#update_grade.Grade" title="update_grade.Grade">update_grade.Grade</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#update_grade.update_document_scores" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update document scores with the determined grade.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>document</strong> – The document.</p></li>
+<li><p><strong>grade</strong> – The grade.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="update_grade.update_gradebook">
+<code class="sig-prename descclassname">update_grade.</code><code class="sig-name descname">update_gradebook</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">document</span><span class="p">:</span> <span class="n">docxrev.com.Document</span></em>, <em class="sig-param"><span class="n">gradebook_path</span><span class="p">:</span> <span class="n">os.PathLike</span></em>, <em class="sig-param"><span class="n">grade</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#update_grade.Grade" title="update_grade.Grade">update_grade.Grade</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#update_grade.update_gradebook" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write the grade for the paper being graded to a CSV file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gradebook_path</strong> – The gradebook.</p></li>
+<li><p><strong>document</strong> – The document.</p></li>
+<li><p><strong>grade</strong> – The grade.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="update_grade.safe_next">
+<code class="sig-prename descclassname">update_grade.</code><code class="sig-name descname">safe_next</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">comments</span><span class="p">:</span> <span class="n">Iterator<span class="p">[</span>docxrev.com.Comment<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; docxrev.com.Comment<a class="headerlink" href="#update_grade.safe_next" title="Permalink to this definition">¶</a></dt>
+<dd><p>Safely get the next comment.</p>
+<p>Safely get the next comment, raising an error if all comments have been exhausted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>comments</strong> – A comment iterator.</p></li>
+<li><p><strong>document</strong> – The document.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>StopIteration</strong> – If all comments are exhausted.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="update_grade.Grade">
+<em class="property">class </em><code class="sig-prename descclassname">update_grade.</code><code class="sig-name descname">Grade</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">header_comments</span><span class="p">:</span> <span class="n">List<span class="p">[</span>docxrev.com.Comment<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">scores</span><span class="p">:</span> <span class="n">List<span class="p">[</span>int<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">deductions</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span><a class="headerlink" href="#update_grade.Grade" title="Permalink to this definition">¶</a></dt>
+<dd><p>A grade.</p>
+<dl class="py attribute">
+<dt id="update_grade.Grade.header_comments">
+<code class="sig-name descname">header_comments</code><em class="property">: List<span class="p">[</span>docxrev.com.Comment<span class="p">]</span></em><a class="headerlink" href="#update_grade.Grade.header_comments" title="Permalink to this definition">¶</a></dt>
+<dd><p>The header comments.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="update_grade.Grade.scores">
+<code class="sig-name descname">scores</code><em class="property">: List<span class="p">[</span>int<span class="p">]</span></em><a class="headerlink" href="#update_grade.Grade.scores" title="Permalink to this definition">¶</a></dt>
+<dd><p>The scores.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="update_grade.Grade.deductions">
+<code class="sig-name descname">deductions</code><em class="property">: int</em><a class="headerlink" href="#update_grade.Grade.deductions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deductions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="update_grade.Grade.content">
+<em class="property">property </em><code class="sig-name descname">content</code><a class="headerlink" href="#update_grade.Grade.content" title="Permalink to this definition">¶</a></dt>
+<dd><p>The content score.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="update_grade.Grade.total">
+<em class="property">property </em><code class="sig-name descname">total</code><a class="headerlink" href="#update_grade.Grade.total" title="Permalink to this definition">¶</a></dt>
+<dd><p>The total score.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Blake Naccarato
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
