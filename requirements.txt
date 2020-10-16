@@ -1,0 +1,31 @@
+# mine
+docxrev
+
+# build
+setuptools
+wheel
+twine
+
+# document
+sphinx
+sphinx-rtd-theme
+doc8
+
+# experiment
+jupyter
+
+# format
+black
+
+# lint
+bandit
+flake8
+flake8-bugbear
+mypy
+pylint
+
+# refactor
+rope
+
+# test
+pytest
