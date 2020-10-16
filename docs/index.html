@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Grade &mdash; Python  documentation</title>
+  <title>add_template_comments &mdash; grade_me380  documentation</title>
   
 
   
@@ -49,7 +49,7 @@
           
 
           
-            <a href="#" class="icon icon-home" alt="Documentation Home"> Python
+            <a href="#" class="icon icon-home" alt="Documentation Home"> grade_me380
           
 
           
@@ -82,7 +82,12 @@
             
               <!-- Local TOC -->
               <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">Grade</a></li>
+<li><a class="reference internal" href="#">add_template_comments</a></li>
+<li><a class="reference internal" href="#module-delete_all_comments">delete_all_comments</a></li>
+<li><a class="reference internal" href="#module-open_all">open_all</a></li>
+<li><a class="reference internal" href="#module-shared">shared</a></li>
+<li><a class="reference internal" href="#module-update_all_grades">update_all_grades</a></li>
+<li><a class="reference internal" href="#module-update_grade">update_grade</a></li>
 </ul>
 </div>
             
@@ -98,7 +103,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">Python</a>
+          <a href="#">grade_me380</a>
         
       </nav>
 
@@ -129,7 +134,7 @@
     
       <li><a href="#" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Grade</li>
+      <li>add_template_comments</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -149,7 +154,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="module-add_template_comments">
-<span id="grade"></span><h1>Grade<a class="headerlink" href="#module-add_template_comments" title="Permalink to this headline">¶</a></h1>
+<span id="add-template-comments"></span><h1>add_template_comments<a class="headerlink" href="#module-add_template_comments" title="Permalink to this headline">¶</a></h1>
 <p>Add template comments to all documents in the directory.</p>
 <dl class="py function">
 <dt id="add_template_comments.add_template_comments">
@@ -164,7 +169,10 @@ supplied, then use the hardcoded paths defined in <cite>shared.PY</cite>.</p>
 </dl>
 </dd></dl>
 
-<span class="target" id="module-delete_all_comments"></span><p>Delete all comments from all documents in the directory.</p>
+</div>
+<div class="section" id="module-delete_all_comments">
+<span id="delete-all-comments"></span><h1>delete_all_comments<a class="headerlink" href="#module-delete_all_comments" title="Permalink to this headline">¶</a></h1>
+<p>Delete all comments from all documents in the directory.</p>
 <dl class="py function">
 <dt id="delete_all_comments.delete_all_comments">
 <code class="sig-prename descclassname">delete_all_comments.</code><code class="sig-name descname">delete_all_comments</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directory</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>str<span class="p">, </span>os.PathLike<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#delete_all_comments.delete_all_comments" title="Permalink to this definition">¶</a></dt>
@@ -178,7 +186,10 @@ supplied, then use the hardcoded paths defined in <cite>shared.py</cite>.</p>
 </dl>
 </dd></dl>
 
-<span class="target" id="module-open_all"></span><p>Open all documents in preparation for grading.</p>
+</div>
+<div class="section" id="module-open_all">
+<span id="open-all"></span><h1>open_all<a class="headerlink" href="#module-open_all" title="Permalink to this headline">¶</a></h1>
+<p>Open all documents in preparation for grading.</p>
 <dl class="py function">
 <dt id="open_all.open_all">
 <code class="sig-prename descclassname">open_all.</code><code class="sig-name descname">open_all</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directory</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>str<span class="p">, </span>os.PathLike<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#open_all.open_all" title="Permalink to this definition">¶</a></dt>
@@ -192,7 +203,10 @@ supplied, then use the hardcoded <cite>shared.directory</cite> defined in <cite>
 </dl>
 </dd></dl>
 
-<span class="target" id="module-shared"></span><p>Shared values.</p>
+</div>
+<div class="section" id="module-shared">
+<span id="shared"></span><h1>shared<a class="headerlink" href="#module-shared" title="Permalink to this headline">¶</a></h1>
+<p>Shared values.</p>
 <dl class="py function">
 <dt id="shared.get_paths">
 <code class="sig-prename descclassname">shared.</code><code class="sig-name descname">get_paths</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directory</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>str<span class="p">, </span>os.PathLike<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Iterator<span class="p">[</span>os.PathLike<span class="p">]</span><a class="headerlink" href="#shared.get_paths" title="Permalink to this definition">¶</a></dt>
@@ -206,7 +220,10 @@ specified in <cite>shared.py</cite>.</p>
 </dl>
 </dd></dl>
 
-<span class="target" id="module-update_all_grades"></span><p>Update all grades.</p>
+</div>
+<div class="section" id="module-update_all_grades">
+<span id="update-all-grades"></span><h1>update_all_grades<a class="headerlink" href="#module-update_all_grades" title="Permalink to this headline">¶</a></h1>
+<p>Update all grades.</p>
 <dl class="py function">
 <dt id="update_all_grades.update_all_grades">
 <code class="sig-prename descclassname">update_all_grades.</code><code class="sig-name descname">update_all_grades</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">directory</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>str<span class="p">, </span>os.PathLike<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gradebook_path</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>str<span class="p">, </span>os.PathLike<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#update_all_grades.update_all_grades" title="Permalink to this definition">¶</a></dt>
@@ -221,7 +238,10 @@ specified in <cite>shared.py</cite>.</p>
 </dl>
 </dd></dl>
 
-<span class="target" id="module-update_grade"></span><p>Update the gradebook and document comments to reflect the latest grade.</p>
+</div>
+<div class="section" id="module-update_grade">
+<span id="update-grade"></span><h1>update_grade<a class="headerlink" href="#module-update_grade" title="Permalink to this headline">¶</a></h1>
+<p>Update the gradebook and document comments to reflect the latest grade.</p>
 <dl class="py function">
 <dt id="update_grade.update_grade">
 <code class="sig-prename descclassname">update_grade.</code><code class="sig-name descname">update_grade</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">document</span><span class="p">:</span> <span class="n">docxrev.com.Document</span></em>, <em class="sig-param"><span class="n">gradebook_path</span><span class="p">:</span> <span class="n">os.PathLike</span></em><span class="sig-paren">)</span><a class="headerlink" href="#update_grade.update_grade" title="Permalink to this definition">¶</a></dt>
