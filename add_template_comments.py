@@ -1,4 +1,4 @@
-"""Add template comments to all documents in the directory."""
+"""Add template comments to all documents."""
 
 from __future__ import annotations
 
@@ -13,16 +13,18 @@ from shared import Path
 
 
 def add_template_comments(directory: Optional[Path] = None):
-    """Add template comments to all documents in the directory.
+    """Add template comments to all documents.
 
-    Add template comments to all documents in `directory`. If `directory` is not
-    supplied, then use the hardcoded paths defined in `shared.py`.
+    Add template comments to all documents in `directory` as specified in
+    :py:func:`shared.get_paths`.
 
-    Args:
-        directory: The directory containing the documents to add template comments to.
+    Parameters
+    ----------
+    directory
+        The directory containing the documents.
     """
 
-    paths = shared.get_paths(directory)
+    (paths, _) = shared.get_paths(directory)
 
     for path in paths:
         with docxrev.Document(path) as document:

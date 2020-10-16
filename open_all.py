@@ -15,14 +15,17 @@ from shared import Path
 def open_all(directory: Optional[Path] = None):
     """Open all documents in preparation for grading.
 
-    Open documents in `directory` in preparation for grading. If `directory` is not
-    supplied, then use the hardcoded `shared.directory` defined in `shared.py`.
+    Open all documents in `directory` as specified in :py:func:`shared.get_paths`.
 
-    Args:
-        directory: The directory containing the documents to open.
+    Parameters
+    ----------
+    directory
+        The directory containing the documents.
+    gradebook_name
+        The name of the gradebook (include ".csv"). Defaults to "grades.csv".
     """
 
-    paths = shared.get_paths(directory)
+    (paths, _) = shared.get_paths(directory)
     for path in paths:
         document = docxrev.Document(path, save_on_exit=False, close_on_exit=False)
         with document:

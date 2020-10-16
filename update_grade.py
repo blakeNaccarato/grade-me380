@@ -1,4 +1,4 @@
-"""Update the gradebook and document comments to reflect the latest grade."""
+"""Update a document's grade as well as the gradebook."""
 
 from __future__ import annotations
 
@@ -11,13 +11,18 @@ import docxrev
 
 import shared
 
+__all__ = ["update_grade"]
+
 
 def update_grade(document: docxrev.Document, gradebook_path: os.PathLike):
     """Update a document's grade as well as the gradebook.
 
-    Args:
-        document: The document.
-        gradebook_path: The gradebook.
+    Parameters
+    ----------
+    document
+        The document.
+    gradebook_path
+        The gradebook.
     """
 
     with document:
@@ -30,8 +35,10 @@ def update_grade(document: docxrev.Document, gradebook_path: os.PathLike):
 def grade_document(document: docxrev.Document) -> Grade:
     """Grade a document.
 
-    Args:
-        document: The doucment.
+    Parameters
+    ----------
+    document
+        Document.
     """
 
     # Search comments in reverse. This means that point deductions in any given section
@@ -86,9 +93,12 @@ def grade_document(document: docxrev.Document) -> Grade:
 def update_document_scores(document: docxrev.Document, grade: Grade):
     """Update document scores with the determined grade.
 
-    Args:
-        document: The document.
-        grade: The grade.
+    Parameters
+    ----------
+    document
+        Document.
+    grade
+        Grade.
     """
 
     # Update the summary comment scores
@@ -115,10 +125,14 @@ def update_gradebook(
 ):
     """Write the grade for the paper being graded to a CSV file.
 
-    Args:
-        gradebook_path: The gradebook.
-        document: The document.
-        grade: The grade.
+    Parameters
+    ----------
+    gradebook_path
+        Gradebook.
+    document
+        Document.
+    grade
+        Grade.
     """
 
     # Prepare rows for the CSV
@@ -164,12 +178,17 @@ def safe_next(comments: Iterator[docxrev.com.Comment]) -> docxrev.com.Comment:
 
     Safely get the next comment, raising an error if all comments have been exhausted.
 
-    Args:
-        comments: A comment iterator.
-        document: The document.
+    Parameters
+    ----------
+    comments
+        A comment iterator.
+    document
+        The document.
 
-    Raises:
-        StopIteration: If all comments are exhausted.
+    Raises
+    ------
+    StopIteration
+        If all comments are exhausted.
     """
     try:
         comment = next(comments)
@@ -188,28 +207,20 @@ class Grade:
     """A grade."""
 
     header_comments: List[docxrev.com.Comment]
-    """The header comments."""
+    """Header comments."""
 
     scores: List[int]
-    """The scores."""
+    """Scores."""
 
     deductions: int
     """Deductions."""
 
     @property
     def content(self) -> int:
-        """The content score."""
+        """Content score."""
         return sum(self.scores)
 
     @property
     def total(self) -> int:
-        """The total score."""
+        """Total score."""
         return self.content - self.deductions
-
-
-if __name__ == "__main__":
-    active_document = docxrev.get_active_document()
-    if active_document.com.FullName in shared.PATHS:
-        update_grade(active_document, shared.GRADEBOOK_PATH)
-    else:
-        raise Exception("Active document not in `shared.PATHS`.")

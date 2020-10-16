@@ -1,4 +1,4 @@
-"""Delete all comments from all documents in the directory."""
+"""Delete all comments from all documents."""
 
 from __future__ import annotations
 
@@ -12,16 +12,18 @@ from shared import Path
 
 
 def delete_all_comments(directory: Optional[Path] = None):
-    """Delete all comments from all documents in the directory.
+    """Delete all comments from all documents.
 
-    Delete all comments from all documents in `directory`. If `directory` is not
-    supplied, then use the hardcoded paths defined in `shared.py`.
+    Delete all comments from all documents in `directory` as specified in
+    :py:func:`shared.get_paths`.
 
-    Args:
-        directory: The directory containing the documents with comments to be deleted.
+    Parameters
+    ----------
+    directory
+        The directory containing the documents.
     """
 
-    paths = shared.get_paths(directory)
+    (paths, _) = shared.get_paths(directory)
     for path in paths:
         docxrev.Document(path).delete_comments()
 

@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import pathlib
 from typing import Optional
 
 import docxrev
@@ -18,16 +17,18 @@ def update_all_grades(
 ):
     """Update all grades.
 
-    Args:
-        directory: The directory to update grades in.
-        gradebook_path: The gradebook to update.
+    Update all grades from all documents in `directory` as specified in
+    :py:func:`shared.get_paths`.
+
+    Parameters
+    ----------
+    directory
+        The directory containing the documents.
+    gradebook_name
+        The name of the gradebook (include ".csv"). Defaults to "grades.csv".
     """
 
-    paths = shared.get_paths(directory)
-    if gradebook_path is None:
-        gradebook_path = shared.GRADEBOOK_PATH
-    else:
-        gradebook_path = pathlib.Path(gradebook_path)
+    (paths, gradebook_path) = shared.get_paths(directory)
 
     for path in paths:
         document = docxrev.Document(path)

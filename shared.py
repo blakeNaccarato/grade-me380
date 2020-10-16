@@ -4,22 +4,34 @@ from __future__ import annotations
 
 import pathlib
 import re
-from typing import Iterator, Optional, Union
+from typing import Iterator, Optional, Tuple, Union
 import os
 
 Path = Union[str, os.PathLike]
 
+__all__ = ["get_paths"]
+
+
 # * -------------------------------------------------------------------------------- * #
 # * PATHS
 
+ENV_KEYS = ["GRADEBOOK_NAME", "DOCX_DIRECTORY"]
+ENV = {key: os.getenv(key) for key in ENV_KEYS}
 
-# Paths
-GRADEBOOK_NAME = "grades.csv"
+if ENV["GRADEBOOK_NAME"] is None:
+    GRADEBOOK_NAME = "grades.csv"
+else:
+    GRADEBOOK_NAME = ENV["GRADEBOOK_NAME"]
+
+if ENV["DOCX_DIRECTORY"] is None:
+    DOCX_DIRECTORY = pathlib.Path().cwd()
+else:
+    DOCX_DIRECTORY = pathlib.Path(ENV["DOCX_DIRECTORY"])
+
 DOCX = r"[!~$]*.docx"  # excludes "~$" prefix temporary files
-# docx_directory = pathlib.Path(r".\submissions\1003")
-DOCX_DIRECTORY = pathlib.Path(r".\submissions\test")
 PATHS = DOCX_DIRECTORY.glob(DOCX)
 GRADEBOOK_PATH = DOCX_DIRECTORY / GRADEBOOK_NAME
+
 
 # * -------------------------------------------------------------------------------- * #
 # * COMMENTS
@@ -63,6 +75,7 @@ HEADER_COMMENT_PATTERNS = [
     re.compile(fr"(?P<header>{header.upper()}: )\d+") for header in FULL_HEADERS
 ]
 
+
 # * -------------------------------------------------------------------------------- * #
 # * SCORING
 # Patterns here use named groups to be reused during scoring operations.
@@ -78,19 +91,40 @@ DEDUCTION_PATTERN = re.compile(r"D(?P<value>\d+)")
 # * FUNCTIONS
 
 
-def get_paths(directory: Optional[Path] = None) -> Iterator[os.PathLike]:
-    """Get the paths to all documents in a directory.
+def get_paths(
+    directory: Optional[Path] = None, gradebook_name: Optional[str] = GRADEBOOK_NAME
+) -> Tuple[Iterator[os.PathLike], os.PathLike]:
+    """Get paths to all documents in a directory and the gradebook.
 
-    Get the paths to all documents in a directory or else just return the paths
-    specified in `shared.py`.
+    Get paths to all documents in whichever comes first of the following: `directory`,
+    the environment variable `DOCX_DIRECTORY`, or the current working directory. Also
+    get the path to the gradebook (default "grades.csv"), which is put in the same
+    directory as the documents.
 
-    Args:
-        directory: The directory to get documents from.
+    Parameters
+    ----------
+    directory
+        The directory to get documents from.
+    gradebook_name
+        The name of the gradebook. Defaults to "grades.csv".
+
+    Returns
+    -------
+    paths
+        Paths to documents.
+    gradebook_path
+        Path to the gradebook.
     """
 
     if directory is None:
         paths = PATHS
     else:
-        paths = pathlib.Path(directory).glob(DOCX)
+        docx_directory = pathlib.Path(directory)
+        paths = docx_directory.glob(DOCX)
 
-    return paths
+    if gradebook_name is None:
+        gradebook_name = GRADEBOOK_NAME
+    else:
+        gradebook_path = DOCX_DIRECTORY / GRADEBOOK_NAME
+
+    return paths, gradebook_path
