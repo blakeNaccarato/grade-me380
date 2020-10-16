@@ -1,15 +1,10 @@
 # mine
 docxrev
 
-# build
-setuptools
-wheel
-twine
-
 # document
 sphinx
 sphinx-rtd-theme
-doc8
+rstcheck
 
 # experiment
 jupyter
