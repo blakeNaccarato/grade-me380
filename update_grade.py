@@ -20,9 +20,9 @@ def update_grade(document: docxrev.Document, gradebook_path: os.PathLike):
     Parameters
     ----------
     document
-        The document.
+        Document.
     gradebook_path
-        The gradebook.
+        Gradebook.
     """
 
     with document:
