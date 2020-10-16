@@ -16,7 +16,7 @@ def add_template_comments(directory: Optional[Path] = None):
     """Add template comments to all documents in the directory.
 
     Add template comments to all documents in `directory`. If `directory` is not
-    supplied, then use the hardcoded paths defined in `shared.PY`.
+    supplied, then use the hardcoded paths defined in `shared.py`.
 
     Args:
         directory: The directory containing the documents to add template comments to.
