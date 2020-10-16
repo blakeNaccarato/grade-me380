@@ -1,7 +1,5 @@
 """Shared values."""
 
-# pylint: disable=invalid-name  # allow lowercase constants
-
 from __future__ import annotations
 
 import pathlib
