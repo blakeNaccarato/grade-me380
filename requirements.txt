@@ -1,5 +1,5 @@
 # mine
--e ..\\docxrev
+docxrev
 
 # document
 sphinx
