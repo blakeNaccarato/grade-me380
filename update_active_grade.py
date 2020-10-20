@@ -8,6 +8,7 @@ from warnings import warn
 
 import docxrev
 import fire
+from win32com.client import constants
 
 import shared
 from shared import Path
@@ -44,10 +45,16 @@ def update_active_grade(
     # First check if the document is in paths without saving
     active_document = docxrev.get_active_document(save_on_exit=False)
     with active_document:
-        is_in_paths = active_document.path in paths  # we consume `paths` here
+        in_paths = active_document.path in paths  # we consume `paths` here
+        in_comment_pane = bool(
+            active_document.com.ActiveWindow.Selection.Range.StoryType
+            == constants.wdCommentsStory
+        )
+        if in_comment_pane:
+            active_document.comments[0].com.Reference.Select()
 
     # Now update the grade or raise an exception
-    if is_in_paths:
+    if in_paths:
         active_document.save_on_exit = True
         update_grade(active_document, gradebook_path)
     else:
