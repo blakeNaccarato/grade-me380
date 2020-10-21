@@ -8,7 +8,6 @@ from warnings import warn
 
 import docxrev
 import fire
-from win32com.client import constants
 
 import shared
 from shared import Path
@@ -42,23 +41,16 @@ def update_active_grade(
     if gradebook_path is not None and gradebook_path != automatic_gradebook_path:
         warn("Supplied gradebook different than expected one.")
 
-    # First check if the document is in paths without saving
     active_document = docxrev.get_active_document(save_on_exit=False)
     with active_document:
+        # Check if the document is in paths
         in_paths = active_document.path in paths  # we consume `paths` here
-        in_comment_pane = bool(
-            active_document.com.ActiveWindow.Selection.Range.StoryType
-            == constants.wdCommentsStory
-        )
-        if in_comment_pane:
-            active_document.comments[0].com.Reference.Select()
-
-    # Now update the grade or raise an exception
-    if in_paths:
-        active_document.save_on_exit = True
-        update_grade(active_document, gradebook_path)
-    else:
-        raise Exception("Active document not in paths.")
+        # Now update the grade or raise an exception
+        if in_paths:
+            active_document.save_on_exit = True
+            update_grade(active_document, gradebook_path)
+        else:
+            raise Exception("Active document not in paths.")
 
 
 if __name__ == "__main__":
