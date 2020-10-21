@@ -41,7 +41,7 @@ def update_active_grade(
     if gradebook_path is not None and gradebook_path != automatic_gradebook_path:
         warn("Supplied gradebook different than expected one.")
 
-    active_document = docxrev.get_active_document(save_on_exit=False)
+    active_document = docxrev.get_active_document()
     with active_document:
         # Check if the document is in paths
         in_paths = active_document.path in paths  # we consume `paths` here

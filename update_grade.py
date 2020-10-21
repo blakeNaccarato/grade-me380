@@ -29,7 +29,6 @@ def update_grade(document: docxrev.Document, gradebook_path: os.PathLike):
         grade = grade_document(document)
         update_document_scores(document, grade)
         update_gradebook(document, gradebook_path, grade)
-        assert True
 
 
 def grade_document(document: docxrev.Document) -> Grade:
