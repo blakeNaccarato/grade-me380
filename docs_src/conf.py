@@ -1,9 +1,9 @@
 # pylint: disable-all
 
-import os
+import pathlib
 import sys
 
-sys.path.insert(0, os.path.abspath(".."))
+sys.path.insert(0, str(pathlib.Path(r"..\src\docxrev").resolve()))
 project = "grade_me380"
 author = "Blake Naccarato"
 copyright = f"2020, {author}"
