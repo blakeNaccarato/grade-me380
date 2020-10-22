@@ -23,9 +23,15 @@ def delete_all_comments(directory: Optional[Path] = None):
         The directory containing the documents.
     """
 
-    (paths, _) = shared.get_paths(directory)
-    for path in paths:
-        docxrev.Document(path).delete_comments()
+    response = input(  # nosec
+        "Are you sure you want to delete all comments? [y/N] >>> "
+    )
+    if response.lower() == "y":
+        (paths, _) = shared.get_paths(directory)
+        for path in paths:
+            docxrev.Document(path).delete_comments()
+    else:
+        print("Not deleting comments.")
 
 
 if __name__ == "__main__":
