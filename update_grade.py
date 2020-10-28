@@ -1,5 +1,4 @@
 """Update a document's grade as well as the gradebook."""
-
 from __future__ import annotations
 
 import csv
@@ -8,6 +7,7 @@ from dataclasses import dataclass
 from typing import Any, Iterator, List
 
 import docxrev
+from win32com.client import constants
 
 import shared
 
@@ -117,6 +117,9 @@ def update_document_scores(document: docxrev.Document, grade: Grade):
     ):
         substitution = fr"\g<header>{score}"
         comment.update(pattern.sub(substitution, comment.text))
+
+    # Re-open the reviewing pane
+    document.com.ActiveWindow.View.SplitSpecial = constants.wdPaneRevisions
 
 
 def update_gradebook(
