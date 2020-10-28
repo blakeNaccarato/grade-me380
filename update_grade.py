@@ -118,9 +118,6 @@ def update_document_scores(document: docxrev.Document, grade: Grade):
         substitution = fr"\g<header>{score}"
         comment.update(pattern.sub(substitution, comment.text))
 
-    # Re-open the reviewing pane
-    document.com.ActiveWindow.View.SplitSpecial = constants.wdPaneRevisions
-
 
 def update_gradebook(
     document: docxrev.Document, gradebook_path: os.PathLike, grade: Grade
