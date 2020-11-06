@@ -7,7 +7,6 @@ from dataclasses import dataclass
 from typing import Any, Iterator, List
 
 import docxrev
-from win32com.client import constants
 
 import shared
 
