@@ -29,6 +29,10 @@ def add_template_comments(directory: Optional[Path] = None):
     for path in paths:
         with docxrev.Document(path) as document:
 
+            # Don't modify documents that already have comments
+            if document.comments:
+                continue
+
             # Convenient access to COM objects
             com_selection = document.com.Windows(1).Selection
             com_find = com_selection.Find
