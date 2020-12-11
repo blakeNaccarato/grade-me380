@@ -21,8 +21,6 @@ def open_all(directory: Optional[Path] = None):
     ----------
     directory
         The directory containing the documents.
-    gradebook_name
-        The name of the gradebook (include ".csv"). Defaults to "grades.csv".
     """
 
     (paths, _) = shared.get_paths(directory)
