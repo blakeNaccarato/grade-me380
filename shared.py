@@ -67,7 +67,7 @@ SUMMARY_COMMENT_PATTERN = re.compile(
 
 # The header comments to be inserted
 HEADER_COMMENTS = [
-    f"{header.upper()}: {score}\\{score}"
+    f"{header.upper()}: {score}/{score}"
     for header, score in zip(FULL_HEADERS, MAX_SCORES)
 ]
 # The pattern for finding header comments as well as substituting scores within them
