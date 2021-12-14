@@ -27,6 +27,7 @@ def open_all(directory: Optional[Path] = None):
     for path in paths:
         document = docxrev.Document(path, save_on_exit=False, close_on_exit=False)
         with document:
+            # Open the revisions pane.
             document.com.ActiveWindow.View.SplitSpecial = constants.wdPaneRevisions
 
 
