@@ -10,6 +10,10 @@ import docxrev
 
 import shared
 
+from dynaconf import Dynaconf
+
+common_deductions = Dynaconf(settings_files=["deductions.yaml"]).deductions
+
 __all__ = ["update_grade"]
 
 
@@ -70,6 +74,22 @@ def grade_document(document: docxrev.Document) -> Grade:
             match = shared.DEDUCTION_PATTERN.match(comment.text)
             if match:
                 deductions += int(match["value"])
+
+            # Add text description to common deduction codes found in the document
+            matches = [
+                pattern.match(comment.text)
+                for pattern in shared.COMMON_DEDUCTION_PATTERNS
+            ]
+            match = matches[0] or matches[1] or matches[2]
+            if any(matches):
+                first_match = [match for match in matches if match][0]
+                first_line_of_comment = comment.text.split("\r", maxsplit=1)[0]
+                deduction_text = [
+                    deduction.text
+                    for deduction in common_deductions
+                    if first_match["code"] == deduction.code
+                ][0]
+                comment.update(first_line_of_comment + "\n\n" + deduction_text)
 
             # Try to get the next comment, raising an error if there are none left
             comment = safe_next(comments)
