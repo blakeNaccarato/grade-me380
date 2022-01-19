@@ -79,11 +79,20 @@ HEADER_COMMENT_PATTERNS = [
 # Patterns here use named groups to be reused during scoring operations.
 
 # Matches comments with a number at the very start of the comment
-CONTENT_POINTS_LOST_PATTERN = re.compile(r"(?P<value>-?\d+)")
+CONTENT_POINTS_LOST = r"(?P<value>\d{1,3})"
+CONTENT_POINTS_LOST_PATTERN = re.compile(CONTENT_POINTS_LOST)
 
 # Matches comments with "D", then a number, at the very start of the comment
-DEDUCTION_PATTERN = re.compile(r"D(?P<value>-?\d+)")
+DEDUCTION = r"D(?P<value>\d{1,3})"
+DEDUCTION_PATTERN = re.compile(DEDUCTION)
 
+# Matches three types of common deduction patterns, e.g. "D2: G2", "2: A1", or "G12"
+COMMON_DEDUCTION_CODE = r"(?P<code>[A-Z]\d{1,3})"
+COMMON_DEDUCTION_PATTERNS = [
+    re.compile(CONTENT_POINTS_LOST + r":\s?" + COMMON_DEDUCTION_CODE),
+    re.compile(DEDUCTION + r":\s?" + COMMON_DEDUCTION_CODE),
+    re.compile(COMMON_DEDUCTION_CODE),
+]
 
 # * -------------------------------------------------------------------------------- * #
 # * FUNCTIONS
