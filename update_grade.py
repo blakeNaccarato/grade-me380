@@ -9,10 +9,7 @@ from typing import Any, Iterator, List
 import docxrev
 
 import shared
-
-from dynaconf import Dynaconf
-
-common_deductions = Dynaconf(settings_files=["deductions.yaml"])
+from deductions import all_deductions
 
 __all__ = ["update_grade"]
 
@@ -85,9 +82,7 @@ def grade_document(document: docxrev.Document) -> Grade:
                 first_match = [match for match in matches if match][0]
                 first_line_of_comment = comment.text.split("\r", maxsplit=1)[0]
                 comment.update(
-                    first_line_of_comment
-                    + "\n\n"
-                    + common_deductions[first_match["code"]]
+                    first_line_of_comment + "\n\n" + all_deductions[first_match["code"]]
                 )
 
             # Try to get the next comment, raising an error if there are none left
