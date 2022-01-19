@@ -12,7 +12,7 @@ import shared
 
 from dynaconf import Dynaconf
 
-common_deductions = Dynaconf(settings_files=["deductions.yaml"]).deductions
+common_deductions = Dynaconf(settings_files=["deductions.yaml"])
 
 __all__ = ["update_grade"]
 
@@ -84,12 +84,11 @@ def grade_document(document: docxrev.Document) -> Grade:
             if any(matches):
                 first_match = [match for match in matches if match][0]
                 first_line_of_comment = comment.text.split("\r", maxsplit=1)[0]
-                deduction_text = [
-                    deduction.text
-                    for deduction in common_deductions
-                    if first_match["code"] == deduction.code
-                ][0]
-                comment.update(first_line_of_comment + "\n\n" + deduction_text)
+                comment.update(
+                    first_line_of_comment
+                    + "\n\n"
+                    + common_deductions[first_match["code"]]
+                )
 
             # Try to get the next comment, raising an error if there are none left
             comment = safe_next(comments)
