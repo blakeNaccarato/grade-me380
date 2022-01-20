@@ -7,6 +7,7 @@ from dataclasses import dataclass
 from typing import Any, Iterator, List
 
 import docxrev
+from natsort import natsorted
 
 import shared
 from deductions import all_deductions
@@ -53,6 +54,7 @@ def grade_document(document: docxrev.Document) -> Grade:
     scores: List[int] = []
     header_comments: List[docxrev.com.Comment] = []
     deductions = 0
+    deduction_codes: List[str] = []
 
     # Get the scores for each section
     comment = safe_next(comments)
@@ -84,6 +86,7 @@ def grade_document(document: docxrev.Document) -> Grade:
                 comment.update(
                     first_line_of_comment + "\n\n" + all_deductions[first_match["code"]]
                 )
+                deduction_codes.append(first_match["code"])
 
             # Try to get the next comment, raising an error if there are none left
             comment = safe_next(comments)
@@ -97,9 +100,9 @@ def grade_document(document: docxrev.Document) -> Grade:
 
     header_comments.reverse()
     scores.reverse()
-    grade = Grade(header_comments, scores, deductions)
-
-    return grade
+    return Grade(
+        header_comments, scores, deductions, "; ".join(natsorted(deduction_codes))
+    )
 
 
 def update_document_scores(document: docxrev.Document, grade: Grade):
@@ -148,10 +151,23 @@ def update_gradebook(
     """
 
     # Prepare rows for the CSV
-    header_row = ["Document", "Grade", "Total Content", "Total Deductions"]
-    header_row.extend([header.upper() for header in shared.FULL_HEADERS])
-    new_row = [document.name, grade.total, grade.content, grade.deductions]
-    new_row.extend(grade.scores)
+    header_row = [
+        "Document",
+        "Grade",
+        "Total Content",
+        "Total Deductions",
+        "Deduction Codes",
+        *[header.upper() for header in shared.FULL_HEADERS],
+    ]
+
+    new_row = [
+        document.name,
+        grade.total,
+        grade.content,
+        grade.deductions,
+        grade.deduction_codes,
+        *grade.scores,
+    ]
     rows_to_write: List[Any] = []
 
     # Create the CSV and write the header if it doesn't exist
@@ -236,3 +252,6 @@ class Grade:
     def total(self) -> int:
         """Total score."""
         return self.content - self.deductions
+
+    deduction_codes: str
+    """ A semicolon delimited string of deduction codes."""
