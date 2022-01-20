@@ -13,4 +13,4 @@ The scripts in this repo can be used to automate scoring of assignments. These s
 
 Now you should be able to launch the AutoHotkey scripts, which will attach the two most important scripts, `update_active_grade.py` and `toggle_review_pane.py` to keyboard shortcuts `Alt+W` and `Ctrl+Alt+W` respectively.
 
-You can also run scripts directly in your IDE or from the command line. Other useful scripts are `open_all.py`, `save_all.py`, and `close_all.py`.
+You can also run scripts directly in your IDE or from the command line. Other useful scripts are `open_all.py`, `save_all.py`, `close_all.py`, and `delete_all_comments.py`.
