@@ -79,7 +79,6 @@ def grade_document(document: docxrev.Document) -> Grade:
                 pattern.match(comment.text)
                 for pattern in shared.COMMON_DEDUCTION_PATTERNS
             ]
-            match = matches[0] or matches[1] or matches[2]
             if any(matches):
                 first_match = [match for match in matches if match][0]
                 first_line_of_comment = comment.text.split("\r", maxsplit=1)[0]
@@ -218,13 +217,17 @@ def safe_next(comments: Iterator[docxrev.com.Comment]) -> docxrev.com.Comment:
     StopIteration
         If all comments are exhausted.
     """
+    comment = None
     try:
         comment = next(comments)
     except StopIteration as error:
-        message = (
-            f"Exhausted comments in {comment.in_document.name}"
-            f"before finding all header comments."
-        )
+        if comment:
+            message = (
+                f"Exhausted comments in {comment.in_document.name} "
+                "before finding all header comments."
+            )
+        else:
+            message = "No comments in document."
         raise type(error)(message) from error
 
     return comment
