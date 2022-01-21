@@ -228,7 +228,7 @@ def safe_next(comments: Iterator[docxrev.com.Comment]) -> docxrev.com.Comment:
             )
         else:
             message = "No comments in document."
-        raise type(error)(message) from error
+        raise error(message) from error
 
     return comment
 
