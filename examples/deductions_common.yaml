@@ -132,6 +132,9 @@ R1: |-
   Please discuss results as you go, rather than all at once at the end. This results in a more natural flow of the discussion.
 
 R2: |-
+  'Human error' is insufficient rationale for percent error calculations between experimental measurements and theoretical values. 'Human error' is a form of systematic error, which is not generally an 'acceptable' form of error. Please do identify any systematic errors you made in your experiment, but also list possible contributions to 'random error', those unmeasured variations in the environment that affect your measurements.
+
+R2: |-
   If you want to have actual tables in your report (as opposed to images of tables), here is a tip for keeping them from breaking across pages:
   - Select the entire table (click the "move" handle that appears at the top-left to quickly select it all)
   - Go to the "Home" tab in the ribbon
