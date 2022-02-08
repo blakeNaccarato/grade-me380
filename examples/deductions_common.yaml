@@ -134,7 +134,7 @@ R1: |-
 R2: |-
   'Human error' is insufficient rationale for percent error calculations between experimental measurements and theoretical values. 'Human error' is a form of systematic error, which is not generally an 'acceptable' form of error. Please do identify any systematic errors you made in your experiment, but also list possible contributions to 'random error', those unmeasured variations in the environment that affect your measurements.
 
-R2: |-
+R3: |-
   If you want to have actual tables in your report (as opposed to images of tables), here is a tip for keeping them from breaking across pages:
   - Select the entire table (click the "move" handle that appears at the top-left to quickly select it all)
   - Go to the "Home" tab in the ribbon
@@ -143,20 +143,20 @@ R2: |-
   - Check the box for "Keep with next"
   This will make each row of the table "follow" the next row to the next page if need be.
 
-R3: |-
+R4: |-
   Tables are just screenshots. Follow the advice in the tutorial "Copy-Paste Tables from Excel to Word (4 min)" in the "Lab Report Writing Resources" module.
 
-R4: |-
+R5: |-
   There is illegible font in figures/tables/charts. When you are embedding a plot in your report, check that all the fonts visible in the chart are about the size of the document text. At the very least, font in figures should not be smaller than the document text.
 
-R5: |-
+R6: |-
   Even if your particular percent error is very low, you should still discuss possible contributions to error.
 
-R6: |-
+R7: |-
   An overly-large table is in your Results and Discussion when a summary table would've been better. You can include full-fledged tables in the Appendix, but try to reduce the data for presentation in the main body of your report. Once way to do this is by taking averages of multiple trials, or by breaking up the table into multiple, smaller, easy-to-digest tables. Also, sometimes there is enough data to warrant plotting it and showing the chart instead.
   You can use a Query Table to further digest an overly-long regular (blue-colored) Table. Use the same approach seen in the Excel tutorial "How-To, Lab 2 Query and Pivot Tables (14 min)", skip to 2:30 to see how a larger table can be chopped down to be more manageable.
 
-R7: |-
+R8: |-
   Any line that you draw on a chart should be meaningful. Certain Excel chart types or chart features draw lines that are not inherently meaningful.
   You should not "connect the dots" of charts as in the "Scatter with Lines and Markers" and "Scatter with Smooth Lines and Markers" chart styles in Excel. This is because each "dot" represents a single measurement, and an arbitrary line drawn between a dot and its neighbor is not a meaningful relationship. We can't say for sure what happens between "dots", because we didn't take measurements at those points. Less is more when it comes to representing data as a chart.
   Linear regression lines are sometimes meaningful, but only if the regression is justified by your physical interpretation.
