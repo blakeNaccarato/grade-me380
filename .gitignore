@@ -1,6 +1,7 @@
 # * -------------------------------------------------------------------------------- * #
 # * PROJECT-SPECIFIC
 
+submissions
 /deductions*.yaml
 /.env
 *.docx

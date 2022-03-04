@@ -22,7 +22,7 @@ else:
     GRADEBOOK_NAME = ENV["GRADEBOOK_NAME"]
 
 if ENV["DOCX_DIRECTORY"] is None:
-    DOCX_DIRECTORY = Path().cwd()
+    DOCX_DIRECTORY = Path().cwd() / "submissions"
 else:
     DOCX_DIRECTORY = Path(ENV["DOCX_DIRECTORY"])
 
