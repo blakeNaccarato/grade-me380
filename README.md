@@ -1,6 +1,6 @@
 # Grade ME380
 
-The scripts in this repo can be used to automate scoring of assignments. These scripts do not perform any "intelligent" actions such as detecting content or formatting issues, they simply keep track of lab report scores, update a CSV of grades for that report, and allow for the grader to quickly insert "canned responses" for very common issues.
+The scripts in this repo can be used to automate the scoring of ME380 lab reports. These scripts do not perform any "intelligent" actions such as detecting content or formatting issues, they simply keep track of lab report scores, update a CSV of grades for that report, and allow for the grader to quickly insert "canned responses" for very common issues.
 
 ## Table of Contents
 
