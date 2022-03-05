@@ -12,7 +12,7 @@ from shared import Path
 
 
 def save_all(directory: Optional[Path] = None):
-    """Save and close all documents.
+    """Save all documents without closing them.
 
     Save all documents in `directory` as specified in
     :py:func:`shared.get_paths`.

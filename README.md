@@ -5,6 +5,7 @@ The scripts in this repo can be used to automate scoring of assignments. These s
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
+- [Summary of scripts](#summary-of-scripts)
 - [Installation](#installation)
   - [Quick setup](#quick-setup)
   - [In-depth installation](#in-depth-installation)
@@ -23,6 +24,22 @@ The scripts in this repo can be used to automate scoring of assignments. These s
   - [Start grading reports](#start-grading-reports)
   - [Update the grade of the active report](#update-the-grade-of-the-active-report)
   - [Update all grades again when finished](#update-all-grades-again-when-finished)
+
+## Summary of scripts
+
+Here is a quick overview of each of the scripts and what they do.
+
+- `add_template_comments.py`: Adds template comments to all submissions.
+- `close_all.py`: Saves and closes all submissions.
+- `deductions_to_semicolon_separated_variables.py`: Writes `common_deductions.yaml` to a semicolon-separated-variables file, `deductions.csv`.
+- `deductions.py`: Not meant to be run directly. Holds the list of deduction code lists to search through.
+- `delete_all_comments.py`: Deletes all comments from all submissions. Be careful with this one.
+- `save_all.py`: Save all submissions without closing them.
+- `shared.py`: Not meant to be run directly. Shared constants used by other scripts. Template comment insertion and grading behavior can be customized if you modify this.
+- `toggle_active_review_pane.py`: Opens the review pane sidebar for the active submission. Useful for quickly navigating comments.
+- `update_active_grade.py`: Updates the grade of the active submission.
+- `update_all_grades.py`: Updates the grades of all submissions.
+
 
 ## Installation
 
