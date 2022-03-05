@@ -2,9 +2,11 @@
 
 The scripts in this repo can be used to automate the scoring of ME380 lab reports. These scripts do not perform any "intelligent" actions such as detecting content or formatting issues, they simply keep track of lab report scores, update a CSV of grades for that report, and allow for the grader to quickly insert "canned responses" for very common issues.
 
-## Table of Contents
+<!-- markdownlint-disable no-emphasis-as-heading -->
+**Table of Contents**
+<!-- markdownlint-restore-->
 
-- [Table of Contents](#table-of-contents)
+
 - [Summary of scripts](#summary-of-scripts)
 - [Installation](#installation)
   - [Quick setup](#quick-setup)
