@@ -26,7 +26,7 @@ The scripts in this repo can be used to automate the scoring of ME380 lab report
   - [Start grading reports](#start-grading-reports)
   - [Update the grade of the active report](#update-the-grade-of-the-active-report)
   - [Update all grades again when finished](#update-all-grades-again-when-finished)
-- [Workaround for "Call was rejected by callee" bug](#workaround-for-call-was-rejected-by-callee-bug)
+- [Workaround for](#workaround-for)
 
 ## Summary of scripts
 
@@ -205,12 +205,16 @@ A given section template comment might look like this. You can give a feedback s
 
 It is good practie to run `update_all_grades.py` once more after finishing grading. This will be sure that all reports have the latest grade tallied. When finished, you can close all lab reports with `close_all.py`.
 
-## Workaround for "Call was rejected by callee" bug
+## Workaround for
 
-As far as I can tell, this is an unavoidable bug in the way that we're talking to Microsoft Word through the  [`pywin32`](https://github.com/mhammond/pywin32) library. A certain open document will be occasionally "infected" with this bug. To fix it, you must save and close the affected document, then re-open it.
+If a script isn't working, especially `update_grade.py` via the AutoHotkey shortcut, is most likely caused by the "Call was rejected by callee" bug. When invoking the script from the keyboard shortcut, you will not be notified when the action fails, you will just see that the grade is not updated.
+
+As far as I can tell, this is an unavoidable bug in the way that we're talking to Microsoft Word through the  [`pywin32`](https://github.com/mhammond/pywin32) library. A certain open document will be occasionally "infected" with this bug. If this happens when running the script from a PowerShell prompt, then you'll see the following traceback.
 
 ```PowerShell
 Traceback (most recent call last):
   <lots of pointless text here>
 pywintypes.com_error: (-2147418111, 'Call was rejected by callee.', None, None)
 ```
+
+**The workaround:** You must save and close the affected document, then re-open it.
