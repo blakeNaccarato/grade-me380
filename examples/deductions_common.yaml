@@ -31,10 +31,10 @@ G7: |- # 4 points
 G8: |-
   Don't put colons at the end of your headings.
 
-G9: |-
+G9: |- # 4 points
   Don't screenshot your Desktop. If you want to present a figure, crop it properly using the built-in Windows snipping tool (Win+Shift+S) or your PDF viewer's own snipping tool.
 
-G10: |-
+G10: |- # 4 points
   Don't screenshot equations or type them as plain text. Instead, use Microsoft Equation Editor (Insert ribbon tab > Equation).
 
 G11: |- # 0 points
@@ -55,16 +55,16 @@ G15: |-
   Multi-level lists are not an appropriate way to structure your report, as you end up with successively further indented paragraphs.
   If you can't figure this one out, just check/use the Lab Report Template!
 
-G16: |-
+G16: |- # 4 points
   Avoid bulleted or numbered lists, or other formats similar to a bulleted list. Instead, describe in paragraph form.
 
 G17: |-
   Figures are missing captions (e.g. "Figure 1: Description of figure"). Check the Lab Report Template.
 
-G18: |-
+G18: |- # 4 points
   Don't wrap text around your figures, as if in a storybook. Rather, figures should be on their own line. I know this can look bloated, especially for narrow pictures. You may use composite figures where you have a few items indicated in a figure. The caption could reflect the parts of the figure like (a), (b), (c), etc.
 
-G19: |-
+G19: |- # 4 points
   Make sure that your figures are "in line with text". If you see a little floating anchor when you select your figure, then you're creating more trouble for yourself than it's worth! It is difficult to keep a figure and its caption together when they are "floating" like this. Please use "in line with text" figures and keep them with their captions.
 
 G20: |-
@@ -76,7 +76,7 @@ G21: |-
 G22: |-
   Avoid pictures of hand-writing. It is usually unnecessary (if scratch work) or should be converted to equations (if a derivation).
 
-G23: |-
+G23: |- # 8 points
   Don't write separate reports for each exercise. Instead, your Introduction and Theory should have all exercises in it, then your Procedures should have all exercises in it, and so on. Work to discuss the interrelated concepts between exercises in any lab that has multiple exercises.
 
 G24: |- # 0 points
@@ -91,7 +91,7 @@ G24: |- # 0 points
 
   Alternatively, you could exit the equation box, put a right-aligning tab in the ruler at the end of the line, then tab over to get your equation number flushed to the right.
 
-G25: |-
+G25: |- # 4 points
   Don't wrap text around your figures, as if in a storybook. Rather, figures should be on their own line. I know this can look bloated, especially for narrow pictures. You may use composite figures where you have a few items indicated in a figure. The caption could reflect the parts of the figure like (a), (b), (c), etc.
 
 G26: |-
@@ -101,7 +101,7 @@ G26: |-
     File > Options > Proofing > AutoCorrect Options > Math AutoCorrect
   and ticking the box for "Use Math AutoCorrect rules outside of math regions". This will give you the \cdot operator which you can use in place of "-" (dash) if you like. This also gives you quick access to Greek characters without having to go to Insert > Symbol.
 
-G27: |-
+G27: |- # 4 points
   Building schematic-type figures directly in your document with shapes and lines is a recipe for disaster. Each shape has its own floating anchor point, moving the figure is a nightmare, and it rarely looks that good. Instead, try building your figure on a blank PowerPoint slide, then copying the elements over to Word, clicking the clipboard menu popup (tap Ctrl straight away after pasting to get there), and selecting "Picture" (Ctrl, then U, not Ctrl+U).
 
 G28: |-
@@ -130,7 +130,7 @@ A1: |- # 4 points
 A2: |- # 4 points
   Don't just list all of your numerical results. Instead, make a claim in the Abstract and back it up with a result or two.
 
-A3: |-
+A3: |- # 4 points
   Don't have headings in your Abstract. Rather, summarize main takeaways in a single paragraph or two.
 
 A4: |-
@@ -142,12 +142,12 @@ A5: |-
 # Introduction and Theory
 # Procedures
 
-P1: |-
+P1: |- # 4 points
   Don't worry about listing out every single little piece of equipment. Instead, address equipment in paragraph form as needed.
 
 # Results and Discussion
 
-R1: |-
+R1: |- # 4 points
   Please discuss results as you go, rather than all at once at the end. This results in a more natural flow of the discussion.
 
 R2: |- # 4 points
@@ -163,7 +163,7 @@ R3: |-
 
   This will make each row of the table "follow" the next row to the next page if need be.
 
-R4: |-
+R4: |- # 4 points
   Tables are just screenshots. Follow the advice in the tutorial "Copy-Paste Tables from Excel to Word (4 min)" in the "Lab Report Writing Resources" module.
 
 R5: |-
@@ -188,7 +188,7 @@ R8: |-
 
 # Conclusion
 
-C1: |-
+C1: |- # 4 points
   No major revelations should be made in the Conclusion. You don't make "new" conclusions here, but rather reiterate the main conclusions you reached in the Results and Discussion section. See the "Rubric.pdf" in "Lab Report Resources" on the "Files" tab.
 
 C2: |-
