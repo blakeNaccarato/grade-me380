@@ -82,7 +82,9 @@ def grade_document(document: docxrev.Document) -> Grade:
                 if "D" not in first_match["code"]:  # Skip if this is a custom deduction
                     first_line_of_comment = comment.text.split("\r", maxsplit=1)[0]
                     comment.update(
-                        first_line_of_comment + "\n\n" + all_deductions[first_match["code"]]
+                        first_line_of_comment
+                        + "\n\n"
+                        + all_deductions[first_match["code"]]
                     )
                     deduction_codes.append(first_match["code"])
 
@@ -117,9 +119,9 @@ def update_document_scores(document: docxrev.Document, grade: Grade):
     # Update the summary comment scores
     summary_comment = document.comments[0]
     substitution = (
-        fr"\g<content>{grade.content}\n"
-        fr"\g<deductions>{grade.deductions}\n"
-        fr"\g<grade>{grade.total}"
+        rf"\g<content>{grade.content}\n"
+        rf"\g<deductions>{grade.deductions}\n"
+        rf"\g<grade>{grade.total}"
     )
     summary_comment.update(
         shared.SUMMARY_COMMENT_PATTERN.sub(substitution, summary_comment.text)
@@ -129,7 +131,7 @@ def update_document_scores(document: docxrev.Document, grade: Grade):
     for comment, pattern, score in zip(
         grade.header_comments, shared.HEADER_COMMENT_PATTERNS, grade.scores
     ):
-        substitution = fr"\g<header>{score}"
+        substitution = rf"\g<header>{score}"
         comment.update(pattern.sub(substitution, comment.text))
 
 
