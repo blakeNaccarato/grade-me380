@@ -37,7 +37,7 @@ G9: |- # 4 points
 G10: |- # 4 points
   Don't screenshot equations or type them as plain text. Instead, use Microsoft Equation Editor (Insert ribbon tab > Equation).
 
-G11: |- # 0 points
+G11: |- # 0 or 2 points
   Make sure you are numbering your equations. I will never take off points as long as you are numbering your equations somehow, but please see my template for an equation-numbering methodology that is more appropriate for reports like this.
 
 G12: |-
@@ -122,6 +122,9 @@ G32: |-
 G33: |- # 0 points
   Your equations are perhaps a little too spaced out.
 
+G34: |-
+  If you're going to double-space your paragraphs, then indent the first line 0.5". Don't do a quadruple-space between paragraphs.
+
 # Abstract
 
 A1: |- # 4 points
@@ -133,10 +136,10 @@ A2: |- # 4 points
 A3: |- # 4 points
   Don't have headings in your Abstract. Rather, summarize main takeaways in a single paragraph or two.
 
-A4: |-
+A4: |- # 4 points
   Abstract is not the proper length. Abstracts should not be overly-long relative to the rest of the report, nor should they be too short.
 
-A5: |-
+A5: |- # 4 points
   Your abstract should not have tables or figures. It is a paragraph-form summary of the major takeaways from the experiment.
 
 # Introduction and Theory
@@ -191,5 +194,8 @@ R8: |-
 C1: |- # 4 points
   No major revelations should be made in the Conclusion. You don't make "new" conclusions here, but rather reiterate the main conclusions you reached in the Results and Discussion section. See the "Rubric.pdf" in "Lab Report Resources" on the "Files" tab.
 
-C2: |-
+C2: |- # 4 points
   Conclusion is not the proper length. Conclusions should not be overly-long relative to the rest of the report, nor should they be too short.
+
+C3: |- # 4 points
+  Don't have headings in your Conclusion. Rather, summarize main takeaways in a single paragraph or two.
