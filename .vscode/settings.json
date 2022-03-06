@@ -1,4 +1,6 @@
 {
   "explorer.sortOrder": "type",
-  "editor.wordWrap": "bounded"
+  "[markdown]": {
+    "editor.wordWrap": "bounded"
+  }
 }
