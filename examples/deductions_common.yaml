@@ -1,30 +1,30 @@
 # General
 
-G1: |-
-  You didn't use the lab report template.
+G1: |-  # 20 points
+  You didn't use the lab report template, or else your lab report differs too much from the template to be recognizable.
 
-G2: |-
+G2: |-  # 4 points
   You are missing the title page, or have used an incorrect title page.
 
-G3: |-
+G3: |-  # 4 points
   You have made excessive grammatical errors.
 
-G4: |-
+G4: |-  # 4 points
   Don't include any kind of Table of Contents in your reports. This includes Table of Figures, Table of Tables, etc. I may have manually removed your TOC's to facilitate my grading of your report.
 
-G5: |-
+G5: |-  # 10 points
   Please don't get creative with your top-level headings. Your top-level headings must be as follows:
-      - Abstract
-      - Introduction and Theory
-      - Procedures
-      - Results and Discussion
-      - Conclusion
+  - Abstract
+  - Introduction and Theory
+  - Procedures
+  - Results and Discussion
+  - Conclusion
 
 G6: |-
   Mind your gaps. Use Ctrl+Enter to insert Page Breaks as necessary, rather than manually hitting Enter a bunch of times between sections.
   Page Breaks are invisible. Ctrl+Shift+8 will toggle invisible characters, and "Page break" will be visible wherever you have inserted them. You can also use Section Breaks, which are a similar concept.
 
-G7: |-
+G7: |-  # 4 points
   Use the "Heading 1" style (modify it as you see fit) for your top-level headings. This facilitates document navigation, and ensures a consistent style. I may have applied the "Heading 1" style in your report to facilitate my grading.
 
 G8: |-
@@ -108,10 +108,10 @@ G30: |-
 
 # Abstract
 
-A1: |-
+A1: |-  # 4 points
   Make sure to include a numerical result or two (especially a summarizing result) to back up claims made in your abstract.
 
-A2: |-
+A2: |-  # 4 points
   Don't just list all of your numerical results. Instead, make a claim in the Abstract and back it up with a result or two.
 
 A3: |-
@@ -119,6 +119,9 @@ A3: |-
 
 A4: |-
   Abstract is not the proper length. Abstracts should not be overly-long relative to the rest of the report, nor should they be too short.
+
+A5: |-
+  Your abstract should not have tables or figures. It is a paragraph-form summary of the major takeaways from the experiment.
 
 # Introduction and Theory
 # Procedures
@@ -131,7 +134,7 @@ P1: |-
 R1: |-
   Please discuss results as you go, rather than all at once at the end. This results in a more natural flow of the discussion.
 
-R2: |-
+R2: |-  # 4 points
   'Human error' is insufficient rationale for percent error calculations between experimental measurements and theoretical values. 'Human error' is a form of systematic error, which is not generally an 'acceptable' form of error. Please do identify any systematic errors you made in your experiment, but also list possible contributions to 'random error', those unmeasured variations in the environment that affect your measurements.
 
 R3: |-

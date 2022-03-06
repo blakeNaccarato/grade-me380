@@ -26,7 +26,7 @@ The scripts in this repo can be used to automate the scoring of ME380 lab report
   - [Start grading reports](#start-grading-reports)
   - [Update the grade of the active report](#update-the-grade-of-the-active-report)
   - [Update all grades again when finished](#update-all-grades-again-when-finished)
-- [Workaround for](#workaround-for)
+- [Workaround in case a certain script isn't working](#workaround-in-case-a-certain-script-isnt-working)
 
 ## Summary of scripts
 
@@ -187,7 +187,11 @@ If you create a comment like "D4: G7", then the grader will assess a four-point 
 
 ![Deduction codes](/tutorial/6.png)
 
-Be careful about taking points off before the "ABSTRACT: 10/10" comment, because these points will not be tallied up. This may be fixed in the future, but for now, only make point-losing comments *after* the "ABSTRACT: 10/10" comment.
+It is also possible to assess a deduction without taking off any points. Simply stating the deduction code will paste the contents of that deduction code without taking off points.
+
+![Deduction code without points lost](/tutorial/11.png)
+
+Finally, be careful about taking points off before the "ABSTRACT: 10/10" comment, because these points will not be tallied up. This may be fixed in the future, but for now, only make point-losing comments *after* the "ABSTRACT: 10/10" comment.
 
 ### Update the grade of the active report
 
@@ -205,7 +209,7 @@ A given section template comment might look like this. You can give a feedback s
 
 It is good practie to run `update_all_grades.py` once more after finishing grading. This will be sure that all reports have the latest grade tallied. When finished, you can close all lab reports with `close_all.py`.
 
-## Workaround for
+## Workaround in case a certain script isn't working
 
 If a script isn't working, especially `update_grade.py` via the AutoHotkey shortcut, is most likely caused by the "Call was rejected by callee" bug. When invoking the script from the keyboard shortcut, you will not be notified when the action fails, you will just see that the grade is not updated.
 
