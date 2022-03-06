@@ -3,6 +3,9 @@
   "[markdown]": {
     "editor.wordWrap": "bounded"
   },
+  "[yaml]": {
+    "editor.wordWrap": "bounded"
+  },
 
   //* Formatting configuration
   "python.formatting.provider": "black",
