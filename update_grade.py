@@ -65,13 +65,11 @@ def grade_document(document: docxrev.Document) -> Grade:
         while not header_comment_pattern.match(comment.text):
 
             # Increment the points lost in this section for matching comments
-            match = shared.CONTENT_POINTS_LOST_PATTERN.match(comment.text)
-            if match:
+            if match := shared.CONTENT_POINTS_LOST_PATTERN.match(comment.text):
                 content_points_lost += int(match["value"])
 
             # Increment total deductions for matching comments
-            match = shared.DEDUCTION_PATTERN.match(comment.text)
-            if match:
+            if match := shared.DEDUCTION_PATTERN.match(comment.text):
                 deductions += int(match["value"])
 
             # Add text description to common deduction codes found in the document
