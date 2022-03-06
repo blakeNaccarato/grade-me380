@@ -2,5 +2,18 @@
   "explorer.sortOrder": "type",
   "[markdown]": {
     "editor.wordWrap": "bounded"
-  }
+  },
+
+  //* Formatting configuration
+  "python.formatting.provider": "black",
+  "rewrap.wrappingColumn": 88,
+  "rewrap.wholeComment": false,
+
+  //! Linting
+  //* Also see the "Linting" section under the "NOT SYNCED" heading
+  "python.linting.enabled": true,
+  "python.linting.flake8Enabled": true,
+
+  //* Linting args
+  "python.sortImports.args": ["--profile", "black"]
 }
