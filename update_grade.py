@@ -81,11 +81,12 @@ def grade_document(document: docxrev.Document) -> Grade:
             ]
             if any(matches):
                 first_match = [match for match in matches if match][0]
-                first_line_of_comment = comment.text.split("\r", maxsplit=1)[0]
-                comment.update(
-                    first_line_of_comment + "\n\n" + all_deductions[first_match["code"]]
-                )
-                deduction_codes.append(first_match["code"])
+                if "D" not in first_match["code"]:  # Skip if this is a custom deduction
+                    first_line_of_comment = comment.text.split("\r", maxsplit=1)[0]
+                    comment.update(
+                        first_line_of_comment + "\n\n" + all_deductions[first_match["code"]]
+                    )
+                    deduction_codes.append(first_match["code"])
 
             # Try to get the next comment, raising an error if there are none left
             comment = safe_next(comments)
