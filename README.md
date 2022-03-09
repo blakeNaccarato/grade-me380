@@ -211,7 +211,7 @@ It is good practie to run `update_all_grades.py` once more after finishing gradi
 
 ## Workaround in case a certain script isn't working
 
-If a script isn't working, especially `update_grade.py` via the AutoHotkey shortcut, is most likely caused by the "Call was rejected by callee" bug. When invoking the script from the keyboard shortcut, you will not be notified when the action fails, you will just see that the grade is not updated.
+If a script isn't working, especially `update_active_grade.py` via the AutoHotkey shortcut, is most likely caused by the "Call was rejected by callee" bug. When invoking the script from the keyboard shortcut, you will not be notified when the action fails, you will just see that the grade is not updated.
 
 As far as I can tell, this is an unavoidable bug in the way that we're talking to Microsoft Word through the  [`pywin32`](https://github.com/mhammond/pywin32) library. A certain open document will be occasionally "infected" with this bug. If this happens when running the script from a PowerShell prompt, then you'll see the following traceback.
 
