@@ -1,4 +1,8 @@
-# Use only the "L" prefix for deductions in this file.
+# Use only the "L" prefix for these codes.
 
 L1: |-
-  I am simply testing things.
+  This is an example of multi-line feedback. The "|" above allows us to type on multiple lines. The "-" after the block will make sure any extra newlines after our block of feedback are not propagated.
+
+L2: This is an example of single-line feedback.
+
+L3: We can keep defining lab-specific common codes in this manner.
