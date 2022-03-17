@@ -69,6 +69,7 @@ Make sure `Powershell 7`, `git`, and `python` are installed. These links should 
 - [Installing git](https://git-scm.com/downloads): Lots to customize, but don't bother customizing installation for now
 - [Installing python](https://www.python.org/downloads/): No need to add to `$PATH`
 - [Installing AutoHotkey](https://www.autohotkey.com/): Install the "current version"
+- [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701): Install and
 
 If you're not familiar with configuring these tools, just accept the default options when installing.
 
